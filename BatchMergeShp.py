@@ -1,12 +1,10 @@
 import time, arcpy, os
 start = time.time()
 
-#look through all folders, subfolders, subsubfolders
-#List all shapefiles & filepaths
-#for each unique shp name, the full file path in the value with unique shp as key
-
+#################### ENTER VARIABLES ##########################
 workspace = r'C:\Users\User\Desktop\XX'  #Enter path directory where files are contained
 output_folder = r'C:\Users\User\Desktop\XX' #Enter path directory where output should go
+###############################################################
 
 Dict = {}
 
@@ -14,7 +12,7 @@ for root, dirs, files in os.walk(workspace):
     for dir in dirs:
         arcpy.env.workspace = os.path.join(root,dir)
         for fc in arcpy.ListFeatureClasses():
-            if not fc in Dict:
+            if not fc in Dict: 
                 Dict[fc] = []
                 Dict[fc].append(os.path.join(root,fc))
             else:
