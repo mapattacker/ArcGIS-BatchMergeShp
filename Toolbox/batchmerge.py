@@ -21,4 +21,6 @@ for key in Dict:
     output = os.path.join(output_folder,key[:-4]) + '_merge'
     arcpy.Merge_management(Dict[key], output)
     print output + " created"
-    arcpy.AddMessage('{} created!'.format(output))
+    arcpy.AddMessage('{} created'.format(output))
+
+arcpy.AddMessage('Script completed!')
