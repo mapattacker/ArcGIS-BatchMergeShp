@@ -25,7 +25,7 @@ for key in Dict:
 for key in Dict:
     output = os.path.join(output_folder,key[:-4]) + '_merge'    #[:-4] to remove ".shp" file extension
     arcpy.Merge_management(Dict[key], output)   #merge all files together that are within the same dictionary key (i.e., same name)
-    print output + " created"
+    print output, "created"
 
 end = time.time()
 date = time.strftime('%H:%M:%S')
