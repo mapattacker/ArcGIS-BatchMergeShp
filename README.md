@@ -5,6 +5,14 @@ I often receive shapefiles that have a standard naming convention, and I used to
 
 This script (BatchMergeShp.py) does everything automatically. Just drop all the folders containing the shapefiles into a main folder, define that main folder path, as well as the output folder path into the script. A single shapefile will be created for each unique name.
 
+##### In summary:
+
+1) You have many shapefiles in different folders that have the same name. e.g., 30 sets of files of one name x 10 times
+
+2) You want to merge all files of the same name together so that you can upload them at one go to a central geodatabase
+
+3) Use the script / tool to excecute. A single shapefile with suffix "_merge" will be created in a defined folder.
+
 ### Requirements
 It uses some Arcpy functions, so requires ArcGIS to be already installed.
 
